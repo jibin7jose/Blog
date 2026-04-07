@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Oasis Shell</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        .doc-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            animation: fadeIn 0.8s forwards;
+        }
+
+        .doc-content h2 {
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .doc-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-box {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--accent-color);
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .nav-sidebar {
+            position: fixed;
+            left: 2rem;
+            top: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (max-width: 1000px) {
+            .nav-sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-vignette"></div>
+
+    <header class="header">
+        <div class="logo">Oasis Docs</div>
+        <nav class="nav-links">
+            <a href="../index.html">Back to Blog</a>
+            <a href="#">Github</a>
+            <a href="../index.html#projects">Roadmap</a>
+        </nav>
+    </header>
+
+    <aside class="nav-sidebar">
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#core-architecture" class="nav-link">Core Architecture</a>
+        <a href="#security" class="nav-link">Security Model</a>
+        <a href="#roadmap" class="nav-link">Release Roadmap</a>
+    </aside>
+
+    <main class="doc-container">
+        <section id="introduction" class="doc-content">
+            <h1>Detailed Explanation: Oasis Shell</h1>
+            <p>Oasis Shell is not just another desktop utility. It is an AI-native interface designed to act as a <strong>Context-Aware Operating Layer</strong> between the user and their local system.</p>
+            <p>Our philosophy is simple: the OS should adapt to the user, not the other way around. By utilizing LLM-driven intent recognition, the Shell anticipates your needs and prepares your workspace before you even ask.</p>
+        </section>
+
+        <section id="core-architecture" class="doc-content">
+            <h2>Core Architecture</h2>
+            <p>At its heart, Oasis Shell utilizes a Rust-based kernel built on Tauri. This provides high-performance access to system calls while maintaining the flexibility of a React-based frontend.</p>
+            <div class="feature-box">
+                <strong>Context Crating:</strong> Our proprietary method of capturing snapshots of active applications, file states, and memory addresses, allowing you to "crate" a task and resume it later with zero friction.
+            </div>
+        </section>
+
+        <section id="security" class="doc-content">
+            <h2>Security & Privacy</h2>
+            <p>In a world of cloud-based AI, privacy is paramount. Oasis Shell prioritizes local compute for all personal data. Your "Context Crates" are encrypted at rest with industry-standard protocols, ensuring that your AI assistant knows you, but no one else does.</p>
+        </section>
+
+        <section id="roadmap" class="doc-content">
+            <h2>Future Horizons</h2>
+            <p>Our roadmap includes deep integration with distributed GPU networks and seamless multi-device state synchronization.</p>
+        </section>
+    </main>
+
+    <footer style="text-align: center; color: var(--text-secondary); padding: 4rem 1rem; border-top: 1px solid var(--border-color); margin-top: 4rem;">
+        <p>&copy; 2026 Oasis Shell. Documentation v1.0.4-Alpha.</p>
+    </footer>
+
+</body>
+</html>

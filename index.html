@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis Shell | The Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            opacity: 0;
+            animation: fadeIn 1s forwards ease-out 0.2s;
+        }
+
+        .posts-grid {
+            opacity: 0;
+            animation: fadeIn 1s forwards ease-out 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-vignette"></div>
+
+    <header class="header">
+        <div class="logo">Oasis Shell</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="docs/overview.html">Documentation</a>
+            <a href="#projects">Projects</a>
+            <a href="mailto:contact@oasis.com">Connect</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image-container" style="margin-bottom: 2rem;">
+                <img src="assets/hero.png" alt="Oasis Shell Hero" style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid var(--border-color);">
+            </div>
+            <h1>The Future of OS Intelligences</h1>
+            <p>Exploring the intersection of LLMs, local compute, and seamless workflow automation. This is the official chronicle of the Oasis Shell project.</p>
+            <div class="cta">
+                <a href="docs/overview.html" class="btn btn-primary">Dive into Docs</a>
+            </div>
+        </section>
+
+        <section class="posts-grid">
+            <div class="post-card">
+              <span class="date">April 07, 2026</span>
+              <h3>Context Crating: The New Paradigm</h3>
+              <p>How we're decoupling application state from memory, enabling instantaneous workspace restoration with AI "Crates".</p>
+            </div>
+
+            <div class="post-card">
+              <span class="date">April 02, 2026</span>
+              <h3>The Sentinel Vault: Zero Knowledge Security</h3>
+              <p>Ensuring that user data remains private while enabling 24/7 AI-driven assistance within the OS kernel.</p>
+            </div>
+
+            <div class="post-card">
+              <span class="date">March 28, 2026</span>
+              <h3>Beyond Desktop: A Pure Intent Engine</h3>
+              <p>Discarding menus for an "Intent Surface" that generates UI on the fly to match user tasks.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; color: var(--text-secondary); padding: 4rem 1rem; border-top: 1px solid var(--border-color); margin-top: 4rem;">
+        <p>&copy; 2026 Oasis Shell. Built with futuristic precision.</p>
+    </footer>
+
+    <script>
+        // Simple logic to add interactivity or dynamic effects
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.addEventListener('click', () => {
+                alert('Detailed post view is under development.');
+            });
+        });
+    </script>
+</body>
+</html>
