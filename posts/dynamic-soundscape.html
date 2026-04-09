@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Soundscape: The Breathing OS | Oasis Shell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Outfit:wght@500;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #03040a;
+            --surface: #0a0b15;
+            --accent: #10b981;
+            --text-main: #ffffff;
+            --text-dim: #8892b0;
+            --border: rgba(255, 255, 255, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header { margin-bottom: 6rem; }
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent);
+            border-radius: 2rem;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to bottom right, #fff, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        section { margin-bottom: 6rem; }
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h2::before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 1.8rem;
+            background: var(--accent);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .tech-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            padding: 3rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-box::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            animation: pulse-width 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-width {
+            0% { transform: scaleX(0); opacity: 0.2; }
+            50% { transform: scaleX(1); opacity: 0.8; }
+            100% { transform: scaleX(0); opacity: 0.2; }
+        }
+
+        .audio-viz {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            height: 60px;
+            margin-top: 2rem;
+        }
+
+        .bar {
+            flex: 1;
+            background: var(--accent);
+            border-radius: 2px;
+            animation: bar-dance 1.5s infinite ease-in-out;
+        }
+
+        @keyframes bar-dance {
+            0%, 100% { height: 10%; }
+            50% { height: var(--h, 60%); }
+        }
+
+        footer {
+            margin-top: 10rem;
+            padding-top: 4rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="tag">Sensory Intelligence</span>
+        <h1>The Breathing OS: Procedural Soundscapes</h1>
+        <div class="meta">Engineering Brief v1.2.0 // Focus: Biometric Feedback</div>
+    </header>
+
+    <section>
+        <p>In traditional operating systems, sound is a one-way notification system. In the Oasis Shell, sound is a continuous, living telemetry layer. We have successfully implemented a <strong>Procedural Engine Hum</strong> that transforms background system metrics into a subtle, immersive auditory experience.</p>
+        
+        <div class="tech-box">
+            <h3>Kernel-Audio Feedback Loop</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim); margin-top: 1rem;">The engine utilizes Web Audio API oscillators synchronized with the Rust kernel's process scheduler. As system load fluctuates, the soundscape modulates in real-time.</p>
+            
+            <div class="audio-viz">
+                <div class="bar" style="--h: 40%;"></div>
+                <div class="bar" style="--h: 70%;"></div>
+                <div class="bar" style="--h: 90%;"></div>
+                <div class="bar" style="--h: 60%;"></div>
+                <div class="bar" style="--h: 80%;"></div>
+                <div class="bar" style="--h: 40%;"></div>
+                <div class="bar" style="--h: 50%;"></div>
+                <div class="bar" style="--h: 30%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Implementation</h2>
+        <ul style="color: var(--text-dim); padding-left: 2rem; margin-bottom: 2rem; list-style: square;">
+            <li style="margin-bottom: 1rem;"><strong>Base Layer (Idle)</strong>: A 40Hz sine wave providing a deep, sub-perceptual foundation.</li>
+            <li style="margin-bottom: 1rem;"><strong>Stress Modulation</strong>: As CPU load increases, a secondary sawtooth oscillator introduces harmonics, mirroring the digital "effort" of the processor.</li>
+            <li style="margin-bottom: 1rem;"><strong>Resonance Filter</strong>: A low-pass filter with high Q-factor opens from 180Hz to 1200Hz based on memory pressure, creating a "whirling" effect during intense task execution.</li>
+            <li style="margin-bottom: 1rem;"><strong>Zero-Latency Sync</strong>: Modulations are calculated on the React render cycle and applied via <code>setTargetAtTime</code> for glitch-free transitions.</li>
+        </p>
+    </section>
+
+    <section>
+        <h2>UX Philosophy</h2>
+        <p>This "Breathing" OS reduces focus fatigue by providing subconscious confirmation of system activity. Users no longer need to check a task manager to know if a background process is active—they can <em>hear</em> it in the subtle shift of the room's atmosphere.</p>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">Return to Core Blog</a>
+    </footer>
+</body>
+</html>
