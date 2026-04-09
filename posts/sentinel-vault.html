@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel Vault: Zero-Knowledge Archival | Oasis Shell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Outfit:wght@500;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #0a0a0a;
+            --accent: #6366f1;
+            --text-main: #ffffff;
+            --text-dim: #888888;
+            --border: rgba(255, 255, 255, 0.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header { margin-bottom: 6rem; }
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+            border-radius: 2rem;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to bottom right, #fff, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        section { margin-bottom: 6rem; }
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            display: flex;
+            items-center;
+            gap: 1rem;
+        }
+
+        h2::before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 1.8rem;
+            background: var(--accent);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .tech-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-item h4 {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-item p {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .feature-list .icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-list .content h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-list .content p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin: 0;
+        }
+
+        footer {
+            margin-top: 10rem;
+            padding-top: 4rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .pdf-mode {
+            background: #fff;
+            color: #000 !important;
+            padding: 4rem;
+            border: 1px solid #ddd;
+        }
+
+        .pdf-mode * {
+            border-color: #eee !important;
+            color: #333 !important;
+        }
+        .pdf-mode h1 {
+            background: none;
+            -webkit-text-fill-color: #000;
+        }
+        .pdf-mode .tag {
+            background: #eee;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <span class="tag">Security Intelligence</span>
+        <h1>Sentinel Vault: Zero-Knowledge Strategic Archival</h1>
+        <div class="meta">Briefing v1.0.4 // Founder Clearance Level 9</div>
+    </header>
+
+    <section>
+        <p>The Sentinel Vault is the core cryptographic sanctuary within the Oasis Shell. Designed as a zero-knowledge substrate, it ensures that strategic assets—code blueprints, fiscal reports, and neural intents—are encrypted at rest and accessible only through derived founder keys.</p>
+        
+        <div class="tech-box">
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Encryption</h4>
+                    <p>AES-256-GCM</p>
+                </div>
+                <div class="tech-item">
+                    <h4>KDF</h4>
+                    <p>PBKDF2-HMAC-SHA256</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Derivation</h4>
+                    <p>600,000 Iterations</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Sanitization</h4>
+                    <p>Host Purcell Purge</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Core Working Functionality</h2>
+        <ul class="feature-list">
+            <li>
+                <div class="icon"></div>
+                <div class="content">
+                    <h3>Neural Key Derivation</h3>
+                    <p>The vault utilizes a Founder Secret combined with a unique workspace salt to derive a master encryption key. No secrets are stored in plain text or persistent memory.</p>
+                </div>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <div class="content">
+                    <h3>Strategic Sealing</h3>
+                    <p>When an asset is "Sealed," the Rust kernel performs an atomic read-encrypt-move sequence. The original file is shredded from the host OS, leaving only an encrypted blob within the Oasis Enclave.</p>
+                </div>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <div class="content">
+                    <h3>Integrity Resonance</h3>
+                    <p>A real-time "Security Resonance" score monitors the stability of the vault ledger, detecting unauthorized modifications or bit-rot within the archival layer.</p>
+                </div>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <div class="content">
+                    <h3>Audit Logging</h3>
+                    <p>Every unseal event is logged with a neural timestamp, creating a non-repudiable audit trail for strategic asset access.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>The Interface</h2>
+        <p>The Sentinel Vault UI features a minimalist, high-fidelity dashboard implemented in React with Framer Motion. Key visual components include:</p>
+        <ul style="color: var(--text-dim); padding-left: 2rem; margin-bottom: 2rem;">
+            <li>Dynamic Progress Visualizers for the Sealing process.</li>
+            <li>Glassmorphic Asset Cards with metadata tooltips.</li>
+            <li>Auth-Wall transition with integrated "Neural Pulse" sound feedback.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">Return to Core Blog</a>
+    </footer>
+</body>
+</html>

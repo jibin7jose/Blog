@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functionality & Stack Overview | Oasis Shell</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --muted: #666666;
+            --accent: #000000;
+            --border: #e0e0e0;
+        }
+        body {
+            font-family: serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        header {
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+        .meta {
+            color: var(--muted);
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            margin-top: 0.5rem;
+        }
+        h2 {
+            font-family: sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 3rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+        .stack-list {
+            list-style: none;
+            padding: 0;
+        }
+        .stack-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dotted var(--border);
+        }
+        .stack-key {
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .feature-grid {
+            margin: 2rem 0;
+        }
+        .feature-card {
+            margin-bottom: 2rem;
+        }
+        .feature-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        .feature-desc {
+            color: var(--muted);
+        }
+        footer {
+            margin-top: 5rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .btn-back {
+            display: inline-block;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            color: var(--muted);
+            font-family: sans-serif;
+            font-size: 0.9rem;
+        }
+        .btn-back:hover {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="btn-back">← Back to Blog</a>
+    
+    <header>
+        <h1>Operating System: Oasis Shell</h1>
+        <div class="meta">Technical Specification & Functional Overview • April 2026</div>
+    </header>
+
+    <section>
+        <p>Oasis Shell is a high-performance system orchestrator and desktop layer designed to bridge the gap between traditional OS kernels and AI-native workflows. This document outlines the current working functionality and the underlying technology stack.</p>
+    </section>
+
+    <section>
+        <h2>The Technology Stack</h2>
+        <div class="stack-list">
+            <div class="stack-item">
+                <span class="stack-key">Kernel / Backend</span>
+                <span class="stack-val">Rust (Tauri Framework)</span>
+            </div>
+            <div class="stack-item">
+                <span class="stack-key">Frontend UI</span>
+                <span class="stack-val">React 19 + TypeScript</span>
+            </div>
+            <div class="stack-item">
+                <span class="stack-key">Visual Engine</span>
+                <span class="stack-val">Three.js + React Force Graph 3D</span>
+            </div>
+            <div class="stack-item">
+                <span class="stack-key">Motion Design</span>
+                <span class="stack-val">Framer Motion + GSAP</span>
+            </div>
+            <div class="stack-item">
+                <span class="stack-key">Audio Engine</span>
+                <span class="stack-val">Web Audio API (Procedural Synthesis)</span>
+            </div>
+            <div class="stack-item">
+                <span class="stack-key">Styling</span>
+                <span class="stack-val">Tailwind CSS (Vanilla-integrated)</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Core Working Functionality</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <span class="feature-title">1. Neural Identity & Secure Handshake</span>
+                <span class="feature-desc">A deep-cyber boot sequence that validates user presence through a cryptographic handshake with the Rust kernel.</span>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-title">2. System Diagnostic Intelligence</span>
+                <span class="feature-desc">Real-time monitoring of CPU, RAM, and Storage directly via Rust's <code>sysinfo</code>. The shell provides a "Reality Anchor" for system health.</span>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-title">3. 3D Neural Cortex (Graph View)</span>
+                <span class="feature-desc">A force-directed 3D graph representation of the system's "Context Crates" and relational knowledge nodes.</span>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-title">4. Sentinel Vault (Zero-Knowledge)</span>
+                <span class="feature-desc">A secure archival layer for sensitive assets, utilizing PBKDF2-HMAC-SHA256 for neural key derivation within the Rust enclave.</span>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-title">5. Sensory Integration (Soundscape)</span>
+                <span class="feature-desc">Procedural, non-intrusive auditory feedback that adjusts based on system load and user activity levels.</span>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-title">6. Command Surface & Intent Parser</span>
+                <span class="feature-desc">A unified command palette that routes natural language intent to specific system actions and internal scripts.</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Current Metrics</h2>
+        <p>The system is currently operating in <strong>Alpha Stage (v0.1.0)</strong>. All system calls are routed through an asynchronous IPC bridge to ensure the frontend remains performant even during heavy system load.</p>
+    </section>
+
+    <footer>
+        &copy; 2026 Oasis Shell Engineering. Confidential Technical Brief.
+    </footer>
+</body>
+</html>
