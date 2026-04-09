@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Terminal: Strategic Command Hub | Oasis Shell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Outfit:wght@500;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #03040a;
+            --surface: #10121d;
+            --accent: #6366f1;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --border: rgba(99, 102, 241, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header { margin-bottom: 6rem; }
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+            border-radius: 2rem;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to bottom right, #fff, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        section { margin-bottom: 6rem; }
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h2::before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 1.8rem;
+            background: var(--accent);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .terminal-demo {
+            background: #000;
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            padding: 2.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 4rem 0;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .terminal-demo::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            opacity: 0.2;
+        }
+
+        .cmd { color: #fff; font-weight: bold; }
+        .out { color: var(--accent); opacity: 0.9; }
+        .meta-line { color: #475569; font-style: italic; }
+
+        footer {
+            margin-top: 10rem;
+            padding-top: 4rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="tag">System Pillar 17</span>
+        <h1>Strategic Command Hub: The Native Terminal</h1>
+        <div class="meta">Operations Brief v1.5.0 // Platform Equilibrium</div>
+    </header>
+
+    <section>
+        <p>Command-line interaction is the bedrock of rapid strategic deployment. To streamline the founder experience, we have Manifested Pillar 17: a high-fidelity, native **Integrated Terminal** that communicates directly with the Oasis Rust Kernel.</p>
+        
+        <div class="terminal-demo">
+            <div class="meta-line">[14:02:15] OASIS KERNEL V4.5-SENTINEL INITIALIZED.</div>
+            <div class="meta-line">[14:02:16] AUTHENTICATED FOUNDER LINK ESTABLISHED.</div>
+            <br>
+            <div><span class="cmd">> status</span></div>
+            <div class="out">System Diagnostic: Oasis Platform Operational. Path synced.</div>
+            <br>
+            <div><span class="cmd">> ls --strategic</span></div>
+            <div class="out">Strategic Inventory Scan: 24 Emerald (Solid), 8 Ruby (Debt Critical).</div>
+            <br>
+            <div><span class="cmd">> _</span></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Architecture</h2>
+        <p>Unlike standard web-based terminals, our Command Hub utilizes the <strong>Tauri IPC (Inter-Process Communication)</strong> bridge to execute system-level directives without the overhead of a dedicated shell process.</p>
+        <ul style="color: var(--text-dim); padding-left: 2rem; margin-bottom: 2rem; list-style: square;">
+            <li style="margin-bottom: 1rem;"><strong>Direct Directive Execution</strong>: Commands like <code>audit</code> and <code>manifest</code> trigger native Rust functions in the <code>execute_cli_directive</code> module.</li>
+            <li style="margin-bottom: 1rem;"><strong>Session Persistence</strong>: Command history is logged to the Neural Ledger, allowing for temporal analysis of strategic shifts.</li>
+            <li style="margin-bottom: 1rem;"><strong>Stress-State Visuals</strong>: The terminal background and accent colors dynamically shift based on the OS "Stress Color," providing immediate visual feedback during critical operations.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Founder Access</h2>
+        <p>The Command Hub can be summoned instantaneously via <code>Ctrl + `</code> (Backtick) or <code>Alt + T</code>. This gesture-based invocation ensures a friction-less transition from 3D visualization to low-level strategic command.</p>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">Return to Core Blog</a>
+    </footer>
+</body>
+</html>
