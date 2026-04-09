@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Crating: Workspace Persistence | Oasis Shell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Outfit:wght@500;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #03040a;
+            --surface: #0f172a;
+            --accent: #6366f1;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --border: rgba(99, 102, 241, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header { margin-bottom: 6rem; }
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+            border-radius: 2rem;
+            font-size: 0.7rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to bottom right, #fff, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        section { margin-bottom: 6rem; }
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h2::before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 1.8rem;
+            background: var(--accent);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+        }
+
+        .crate-mock {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 3rem;
+            padding: 3rem;
+            margin: 4rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+        }
+
+        .crate-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 2rem;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .title { color: #fff; font-weight: 900; font-size: 1rem; margin-bottom: 1rem; text-transform: uppercase;}
+        .apps { font-size: 0.7rem; color: var(--text-dim); display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .app-tag { background: var(--accent); color: #fff; padding: 0.2rem 0.5rem; border-radius: 0.5rem; }
+
+        footer {
+            margin-top: 10rem;
+            padding-top: 4rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="tag">System Pillar 12</span>
+        <h1>Context Crating: Workspace Persistence</h1>
+        <div class="meta">Operations Brief v1.7.0 // Environment Agility</div>
+    </header>
+
+    <section>
+        <p>Transitioning between high-intensity focus states often requires a significant overhead of manual window management. To eliminate this friction, we have Implement Pillar 12: <strong>Context Crating</strong>. This system allows you to snapshot your entire operating environment and restore it with a single neural gesture.</p>
+        
+        <div class="crate-mock">
+            <div class="crate-card">
+                <div class="title">Quantum Dev Loop</div>
+                <div class="apps">
+                    <span class="app-tag">VS Code</span>
+                    <span class="app-tag">Warp</span>
+                    <span class="app-tag">Figma</span>
+                </div>
+            </div>
+            <div class="crate-card">
+                <div class="title">Market Pulse Forge</div>
+                <div class="apps">
+                    <span class="app-tag">Chrome</span>
+                    <span class="app-tag">Slack</span>
+                    <span class="app-tag">Notion</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>The Crating Engine</h2>
+        <p>A "Crate" is more than just a list of open apps. It captures the spatial arrangement and strategic relevance of your workspace at a specific moment in time.</p>
+        <ul style="color: var(--text-dim); padding-left: 2rem; margin-bottom: 2rem; list-style: square;">
+            <li style="margin-bottom: 1rem;"><strong>AI Context Naming</strong>: Utilizing the local Gemma3 model, the system analyzes the titles of your open windows to suggest a punchy, conceptual name for the crate.</li>
+            <li style="margin-bottom: 1rem;"><strong>SQLite Persistence</strong>: Crates are stored in a local encrypted ledger (<code>oasis_crates.db</code>), ensuring your workspace configurations are available instantly upon boot.</li>
+            <li style="margin-bottom: 1rem;"><strong>Native Spawning</strong>: The Rust kernel interacts directly with the OS sub-system to relaunch applications, bypassing the limitations of the web layer.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Strategic Impact</h2>
+        <p>By using <code>Alt + C</code>, you can now toggle between "Design Mode," "Dev Mode," and "Growth Strategy" without ever having to search for a task-bar icon. It is the ultimate expression of the Oasis Shell's philosophy: <strong>Focus is Currency.</strong></p>
+    </section>
+
+    <footer>
+        <a href="../index.html" class="back-link">Return to Core Blog</a>
+    </footer>
+</body>
+</html>
